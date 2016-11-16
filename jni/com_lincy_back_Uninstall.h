@@ -14,7 +14,10 @@
  
  #define MEM_ZERO(pDest, destSize) memset(pDest, 0, destSize)
  
- //LOGºê¶šÒå
+ #define LOG_TAG "JNI_LOG"
+ #define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
+ #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
+
  #define LOG_INFO(tag, msg) __android_log_write(ANDROID_LOG_INFO, tag, msg)
  #define LOG_DEBUG(tag, msg) __android_log_write(ANDROID_LOG_DEBUG, tag, msg)
  #define LOG_WARN(tag, msg) __android_log_write(ANDROID_LOG_WARN, tag, msg)

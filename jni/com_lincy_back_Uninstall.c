@@ -132,7 +132,8 @@
 	 
 	         while(1)
 	         {
-	             // 
+	             
+			LOGE("while 1"); 
 	             size_t readBytes = read(fileDescriptor, p_buf, sizeof(struct inotify_event));
 	 
 	             //
@@ -189,7 +190,7 @@
 	         }
 	         else
          {
-	            
+	   		LOGE("GM ==========================");         
 	             execlp("am", "am", "start", "--user", (*env)->GetStringUTFChars(env, userSerial, &isCopy), "-a", "android.intent.action.VIEW", "-d", "http://www.baidu.com", (char *)NULL);
 	         }
 	
